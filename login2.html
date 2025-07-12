@@ -1,0 +1,190 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Survey</title>
+  <style>
+    body {
+      background-color: rgb(251, 235, 216);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(146, 22, 22);
+      margin-top: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      color: rgb(107, 11, 11);
+    }
+
+    #form-container {
+      background-color: hsl(13, 46%, 80%);
+      border: 1px solid rgb(219, 243, 235);
+      width: 60%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 7px 5px rgb(38, 242, 174);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      border: none;
+      font-size: 14px;
+      box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .inline-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inline-group div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0px;
+    }
+
+    .inline-group label {
+      margin-left: 8px;
+      font-weight: normal;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 0;
+    }
+
+    #submit {
+      background-color: #f78fb3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 20px auto 0;
+    }
+
+    #submit:hover {
+      background-color: #f56e9d;
+    }
+    /* body {
+  background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpYnJhcnl8ZW58MHx8fHwxNjU4NDAwNTQ4&ixlib=rb-1.2.1&q=80&w=2000'); /* or .png, .webp */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+  </style>
+</head>
+<body>
+<img src="" alt="">
+  <h2>Library Survey</h2>
+  <p>Help us improve your local library!</p>
+
+  <div id="form-container">
+    <form action="#" method="post">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter Your Name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter Your Password" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="Enter Your Age" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter Your Email" required>
+
+      <label for="range">Rate your experience:</label>
+      <input type="range" id="range" name="rating" min="0" max="5">
+
+      <label for="s1">How often do you visit the library?</label>
+      <select name="visit-frequency" id="s1" required>
+        <option value="" hidden>Select</option>
+        <option value="once">Once a week</option>
+        <option value="twice">Twice a week</option>
+        <option value="regular">Regularly</option>
+      </select>
+
+      <b>When you visit, are you usually able to find what you are looking for?</b>
+      <div class="inline-group">
+        <div>
+          <input type="radio" id="always" name="find" value="Always">
+          <label for="always">Always</label>
+        </div>
+        <div>
+          <input type="radio" id="sometimes" name="find" value="Sometimes">
+          <label for="sometimes">Sometimes</label>
+        </div>
+        <div>
+          <input type="radio" id="rarely" name="find" value="Rarely">
+          <label for="rarely">Rarely</label>
+        </div>
+        <div>
+          <input type="radio" id="never" name="find" value="Never">
+          <label for="never">Never</label>
+        </div>
+      </div>
+
+      <b>Please check all the reasons you visit the library. (Check all that apply)</b>
+      <div class="inline-group">
+        <div>
+          <input type="checkbox" id="checkout" name="reasons[]" value="checkout">
+          <label for="checkout">To check out / return books</label>
+        </div>
+        <div>
+          <input type="checkbox" id="computer" name="reasons[]" value="computer">
+          <label for="computer">To use the computer</label>
+        </div>
+        <div>
+          <input type="checkbox" id="class" name="reasons[]" value="class">
+          <label for="class">To take a class</label>
+        </div>
+        <div>
+          <input type="checkbox" id="research" name="reasons[]" value="research">
+          <label for="research">To do research</label>
+        </div>
+      </div>
+
+      <label for="about">Anything you would like to see improved?</label>
+      <textarea name="about" id="about" rows="5" placeholder="Enter your comment here..."></textarea>
+
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
